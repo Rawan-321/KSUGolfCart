@@ -502,11 +502,11 @@ class GolfCartReservationApp:
             if len(reservations_data) !=0:
                 for reservation in reservations_data:
                     dateTime1 = datetime.strptime(reservation[2], "%d/%m/%Y")
-                    if dateTime1 >= datetime.today():
-                        display_text = f"Start Time: {reservation[0]} | End Time: {reservation[1]} | " \
-                                       f"Date: {reservation[2]} | user ID: {reservation[3]} | "\
-                                       f"Plate Number:{reservation[4]}"
-                        self.reservation_listbox.insert(tk.END, display_text)
+                   # if dateTime1 >= datetime.today():
+                    display_text = f"Start Time: {reservation[0]} | End Time: {reservation[1]} | " \
+                                   f"Date: {reservation[2]} | user ID: {reservation[3]} | "\
+                                   f"Plate Number:{reservation[4]}"
+                    self.reservation_listbox.insert(tk.END, display_text)
             else:
                 display=f"There is no active reservations"
                 self.reservation_listbox.insert(tk.END,display)
